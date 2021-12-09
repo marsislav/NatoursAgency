@@ -1,7 +1,7 @@
 
 .btn {
 
-  &:link, &:visited {
+  &, &:link, &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
@@ -9,6 +9,8 @@
     border-radius: 100px;
     transition:all 0.2s;
     position: relative;
+    border:none;
+    cursor: pointer;
 
   }
   &:hover {
@@ -20,13 +22,18 @@
       opacity: 0;
     }
   }
-  &:active{
+  &:active, &:focus{
+    outline:none;
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba($colorBlack,0.2);
   }
   &--White {
     background: $colorWhite;
     color:$colorGreyDark;
+  }
+  &--Green {
+    background: $colorPrimary;
+    color:$colorWhite;
   }
 
   &:after {
@@ -49,5 +56,31 @@
   }
   &--White:after {
     background: $colorWhite;
+  }
+  &--Green:after {
+    background: $colorPrimary;
+  }
+
+}
+.btnText{
+  &:link,
+  &:visited{
+    font-size:1.6rem;
+    color:$colorPrimary;
+    display:inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $colorPrimary;
+    padding:3px;
+    transition: all 0.2s;
+  }
+  &:hover {
+background: $colorPrimary;
+    color:$colorWhite;
+    box-shadow: 0 1rem 2rem rgba($colorBlack, .2);
+    transform:translateY(-2px);
+    &:active {
+      box-shadow: 0 0.5rem 2rem rgba($colorBlack, .2);
+      transform:translateY(-2px);
+    }
   }
 }

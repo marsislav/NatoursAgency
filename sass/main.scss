@@ -6,10 +6,19 @@
 @import "base/typography";
 @import "base/utilities";
 @import "components/buttons";
+//@import "components/card";
+@import "components/featurebox";
+@import "components/story";
+@import "components/card";
 
+@import "components/composition";
+
+@import "components/form";
 @import "layout/header";
 @import "pages/home";
+
 @import "layout/grid";
+@import "components/footer";
 
 
 html {
