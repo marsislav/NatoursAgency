@@ -3,6 +3,10 @@
   -moz-perspective:150rem;
   position: relative;
   height: 52rem;
+  @include respond(tab-land){
+    margin-bottom:1.8rem;
+  }
+
 &__side{
   background: $colorWhite;
   height: 52rem;

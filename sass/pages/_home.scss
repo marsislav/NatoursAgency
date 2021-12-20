@@ -2,6 +2,9 @@
 background: $colorGreyLight1;
   padding:25rem 0;
   margin-top:-25vh;
+  @include respond(tab-port) {
+    padding:20rem 0;
+  }
 }
 .sectionFeatures  {
   padding:20rem 0;
@@ -12,26 +15,38 @@ background: $colorGreyLight1;
   & > * {
     transform: skewY(7deg);
   }
+  @include respond(tab-port) {
+    padding:15rem 0;
+  }
 
 }
 .sectionTours {
   background: $colorGreyLight1;
   padding:25rem 0 15rem 0;
   margin-top:-10rem;
+  @include respond(tab-port) {
+    padding:20rem 0 10rem 0;
+  }
 }
 .sectionStories{
   padding:15rem 0;
   background-image: linear-gradient(to right bottom, rgba(255,255,255, 0.93), rgba(247,247,247, 0.93)), url("../img/beach.jpg");
-  background-size:cover
+  background-size:cover;
+  @include respond(tab-port) {
+    padding:10rem 0;
+  }
 }
 .sectionBook {
   padding:15rem 0;
   background:linear-gradient(to right bottom, $colorPrimaryLight, $colorPrimaryDark);
+  @include respond(tab-port) {
+    padding:10rem 0;
+  }
 }
 .book {
   background:linear-gradient(105deg, rgba($colorWhite, 0.8)0%,  rgba($colorWhite, 0.8)50%, transparent 50%), url(../img/5.jpg);
   background-size:cover;
-  background-position: bottom;
+  background-position: bottom ;
   border-radius:3px;
   box-shadow: 0 1.5rem 4rem rgba($colorBlack, 0.2);
   &__form{
