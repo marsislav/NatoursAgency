@@ -14,13 +14,45 @@
     <title>Natours Project Template</title>
 </head>
 <body>
+<div class="navigation">
+    <input type="checkbox" class="navigation__checkbox" id="naviToggle">
+
+    <label for="naviToggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+    </label>
+
+    <div class="navigation__background">
+        &nbsp;
+    </div>
+    <nav class="navigation__nav">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">About Natours</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">Your benefit</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">Popular tours</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">Stories</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">Book now!</a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+
 <header class="header">
     <div class="header__logoBox">
         <img src="img/logo.png" alt="Natours Agency" class="header__logo"></div>
 <div class="header__textBox">
     <h1 class="headingPrimary"><span class="headingPrimary--Main">Natours</span> <span class="headingPrimary--Sub">Travel Agency</span></h1>
     <a href="#" class="btn btn--White btn--Animated">Discover Tours</a>
-</div>
+
 
 </header>
 <main>
@@ -32,7 +64,7 @@
 
         </div>
             <div class="row">
-                <div class="col">
+                <div class="col-sm-6 col-xs-12">
                     <h3 class="headingTertiary u-marginBottomSmall" >
                         You are going to fall in love with nature
                     </h3>
@@ -47,7 +79,7 @@
                     </p>
                     <a href="#" class="btnText">Learn More &rarr;</a>
                 </div>
-                <div class="col">
+                <div class="col-sm-6 col-xs-12">
                     <div class="composition">
                         <img src="img/1.jpg" alt="Composition Photo" class="composition__photo composition__photo--p1">
                         <img src="img/2.jpg" alt="Composition Photo" class="composition__photo composition__photo--p2">
@@ -314,7 +346,7 @@
         <img src="img/logo.png" alt="Natours logo" class="footer__logo">
     </div>
     <div class="row">
-        `<div class="col">
+        <div class="col">
             <div class="footer__navigation">
                 <ul class="footer__list">
                     <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
@@ -327,9 +359,9 @@
         </div>
         <div class="col">
             <p class="footer__copyright">
-                <a href="#" class="footer__copyright">
-                    Template By:<a href="https://marsislav.net" target="_blank" class="footer__link"> Marsislav, &copy; 2022
-                </a>
+
+                    Template By: <a href="https://marsislav.net" target="_blank" class="footer__link"> Marsislav, &copy; 2022
+
             </p>
         </div>
     </div>

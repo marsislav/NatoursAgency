@@ -2,6 +2,7 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "base/base";
+@import "layout/navigation";
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
@@ -15,6 +16,7 @@
 
 @import "components/form";
 @import "layout/header";
+
 @import "pages/home";
 
 @import "layout/grid";
