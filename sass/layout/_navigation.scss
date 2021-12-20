@@ -1,0 +1,132 @@
+.navigation {
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background: $colorWhite;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 200;
+    box-shadow: 0 1rem 3rem rgba($colorBlack, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    transition: transform 1s;
+    border-radius: 50%;
+    z-index: 100;
+    background: radial-gradient($colorPrimaryLight, $colorPrimaryDark);
+    //transform:scale(80);
+  }
+
+  &__nav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 150;
+    opacity: 0;
+    transition: all 1s;
+    & a {
+      color:$colorWhite;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style: none;
+    width: 100%;
+
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link, &visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $colorWhite;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      background: linear-gradient(120deg, transparent 0%, transparent 50%, $colorWhite 50%);
+      background-size: 220%;
+      transition: all 0.4s;
+    }
+
+    &:hover, &:active {
+      background-position: 100%;
+      color: $colorPrimary;
+      transform: translateX(1rem);
+
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  //Icon
+  &__icon {
+    margin-top: 3.5rem;
+    position: relative;
+
+    &, &:before, &:after {
+      width: 3rem;
+      height: 2px;
+      background: $colorGreyDark;
+      display: inline-block;
+
+    }
+
+    &:before, &:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &:before {
+      top: -0.8rem;
+    }
+
+    &:after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon:before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon:after {
+    top: 1rem;
+  }
+
+}
