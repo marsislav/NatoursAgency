@@ -318,6 +318,14 @@ body {
   padding-left: 9rem;
   transform: skewX(-12deg);
   margin-bottom: 6rem; }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -326,8 +334,10 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
+    transform: translateX(-3rem) skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-3rem) skewX(0deg); } }
   .story__img {
     height: 100%;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
@@ -336,6 +346,9 @@ body {
     transition: all 0.5s; }
   .story__text {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: translateX(-3rem) skewX(0deg); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -451,6 +464,32 @@ body {
     text-transform: uppercase; }
   .card__priceValue {
     font-size: 6rem; }
+  @media (max-width: 56.25em) {
+    .card {
+      height: auto;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+      .card:hover .card__side--front {
+        transform: rotateY(0); }
+      .card__cta {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem; }
+      .card__priceBox {
+        margin-bottom: 3rem; }
+      .card__priceValue {
+        font-size: 6rem; } }
 
 .composition {
   position: relative; }
@@ -462,6 +501,9 @@ body {
     z-index: 10;
     transition: all 0.5s;
     outline-offset: 2rem; }
+    @media (max-width: 56.25em) {
+      .composition__photo {
+        margin-top: 5rem; } }
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
@@ -579,11 +621,14 @@ body {
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
-  .sectionFeatures > * {
-    transform: skewY(7deg); }
+  @media (max-width: 37.5em) {
+    .sectionFeatures {
+      margin-top: 28rem; } }
   @media (max-width: 56.25em) {
     .sectionFeatures {
-      padding: 15rem 0; } }
+      padding: 10rem 0; } }
+  .sectionFeatures > * {
+    transform: skewY(7deg); }
 
 .sectionTours {
   background: #f7f7f7;
@@ -614,9 +659,15 @@ body {
   background-position: bottom;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .book {
+      background: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 80%, transparent 80%), url(../img/5.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 80%; } }
 
 .footer {
   background: #333;

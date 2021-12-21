@@ -11,13 +11,19 @@ background: $colorGreyLight1;
   background-image: linear-gradient(to right bottom, rgba($colorPrimaryDark, 0.8), rgba($colorPrimary, 0.8)), url("../img/3.jpg");
   background-size: cover;
   transform: skewY(-7deg);
-  margin-top:-10rem;
+  margin-top: -10rem;
+
+  @include respond(phone) {
+    margin-top:28rem;
+  }
+  @include respond(tab-port) {
+    padding:10rem 0;
+  }
+
   & > * {
     transform: skewY(7deg);
   }
-  @include respond(tab-port) {
-    padding:15rem 0;
-  }
+
 
 }
 .sectionTours {
@@ -46,11 +52,18 @@ background: $colorGreyLight1;
 .book {
   background:linear-gradient(105deg, rgba($colorWhite, 0.8)0%,  rgba($colorWhite, 0.8)50%, transparent 50%), url(../img/5.jpg);
   background-size:cover;
-  background-position: bottom ;
+  background-position: bottom;
   border-radius:3px;
   box-shadow: 0 1.5rem 4rem rgba($colorBlack, 0.2);
+
+  @include  respond(tab-land){
+    background:linear-gradient(105deg, rgba($colorWhite, 0.8)0%,  rgba($colorWhite, 0.8)80%, transparent 80%), url(../img/5.jpg);
+  }
   &__form{
     width:50%;
     padding:6rem;
+    @include  respond(tab-land){
+      width: 80%;
+    }
   }
 }
